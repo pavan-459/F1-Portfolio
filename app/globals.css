@@ -1,0 +1,79 @@
+@import "tailwindcss";
+
+:root {
+  --background: #050507;
+  --foreground: #f5f5f5;
+
+  --color-rb-navy: #0600ef;
+  --color-rb-navy-dark: #030066;
+  --color-rb-red: #e10600;
+  --color-rb-yellow: #ffd400;
+  --color-carbon: #0a0a0a;
+  --color-carbon-light: #17171a;
+  --color-silver: #e5e7eb;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-rb-navy: var(--color-rb-navy);
+  --color-rb-navy-dark: var(--color-rb-navy-dark);
+  --color-rb-red: var(--color-rb-red);
+  --color-rb-yellow: var(--color-rb-yellow);
+  --color-carbon: var(--color-carbon);
+  --color-carbon-light: var(--color-carbon-light);
+  --color-silver: var(--color-silver);
+  --font-sans: var(--font-inter);
+  --font-display: var(--font-rajdhani);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+}
+
+::selection {
+  background: var(--color-rb-red);
+  color: #fff;
+}
+
+::-webkit-scrollbar {
+  width: 14px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-carbon);
+}
+::-webkit-scrollbar-thumb {
+  background-color: #efefef;
+  background-image: linear-gradient(45deg, #000 25%, transparent 25%),
+    linear-gradient(-45deg, #000 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, #000 75%),
+    linear-gradient(-45deg, transparent 75%, #000 75%);
+  background-size: 8px 8px;
+  background-position: 0 0, 0 4px, 4px -4px, -4px 0px;
+  border-radius: 3px;
+  border: 2px solid var(--color-carbon);
+  background-clip: padding-box;
+}
+::-webkit-scrollbar-thumb:hover {
+  border-color: var(--color-rb-red);
+}
+
+.font-display {
+  font-family: var(--font-display), sans-serif;
+}
+
+.text-outline {
+  -webkit-text-stroke: 1.5px rgba(245, 245, 245, 0.85);
+  color: transparent;
+}
+
+.bg-checker {
+  background-image: linear-gradient(45deg, #000 25%, transparent 25%),
+    linear-gradient(-45deg, #000 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, #000 75%),
+    linear-gradient(-45deg, transparent 75%, #000 75%);
+  background-size: 16px 16px;
+  background-position: 0 0, 0 8px, 8px -8px, -8px 0px;
+}
